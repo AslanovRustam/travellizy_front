@@ -1,13 +1,8 @@
-import "./App.css";
+import ListOfCard from "./components/listOfCards";
+import db from "./db.json";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hello</h1>
-      </header>
-    </div>
-  );
+  return <ListOfCard items={db} />;
 }
 
 export default App;

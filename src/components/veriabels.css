@@ -1,0 +1,12 @@
+:root {
+  /*FONTS WEIGHT*/
+  --bold: 700;
+  --medium: 500;
+  --regular: 400;
+
+  /*COLORS*/
+  --background-color: #f5f6fb;
+  --primary-color: #000000;
+  --accent-color: #0e7adf;
+  --secondary-color: #565758;
+}
