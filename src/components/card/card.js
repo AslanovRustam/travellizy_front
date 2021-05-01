@@ -1,12 +1,18 @@
-import defaultImg from "../images/default.png";
+import defaultImg from "../../images/default.png";
 import s from "./card.module.css";
 export default function Card({ name, url, price, quantity }) {
   return (
     <>
       <a target="_blank" href="{}">
-        <img src={defaultImg} alt={name} width="380" height="214" />
+        <img
+          src={defaultImg}
+          className={s.itemImg}
+          alt={name}
+          width="380"
+          height="214"
+        />
         <div>
-          <span className={s.itemName}>{name}</span>
+          <p className={s.itemName}>{name}</p>
         </div>
         <div>
           <span>{price}</span>

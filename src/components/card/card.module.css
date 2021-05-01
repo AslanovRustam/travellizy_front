@@ -4,6 +4,7 @@
 .itemsContainer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .cardContainer {
   width: calc((100% - 6 * 10px) / 3);
@@ -12,5 +13,12 @@
 .itemName {
   color: var(--primary-color);
   display: block;
+  /* width: 100%; */
+}
+.itemImg {
   width: 100%;
+  height: auto;
+}
+.listOfCard {
+  width: 1000px;
 }

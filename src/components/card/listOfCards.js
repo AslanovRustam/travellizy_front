@@ -3,7 +3,7 @@ import s from "./card.module.css";
 
 export default function ListOfCard({ items }) {
   return (
-    <div>
+    <div className={s.listOfCard}>
       <ul className={s.itemsContainer}>
         {items.map((item) => (
           <li key={item.id} className={s.cardContainer}>

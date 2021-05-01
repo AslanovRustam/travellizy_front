@@ -1,6 +1,7 @@
 [
   {
     "id": "id-1",
+    "producer": "Acer",
     "name": "Ноутбук Acer Aspire 5 A515-56G-54JD (NX.A1LEU.00A) Pure Silver",
     "display": [
       {
@@ -43,6 +44,7 @@
   },
   {
     "id": "id-2",
+    "producer": "Asus",
     "name": "Ноутбук Asus ROG Strix G15 G512LI-HN058 (90NR0381-M01630) Black",
     "display": [
       {
@@ -81,6 +83,7 @@
   },
   {
     "id": "id-3",
+    "producer": "Apple",
     "name": "Ноутбук Apple MacBook Air 13 M1 256GB 2020 (MGN93) Silver",
     "display": [
       {
@@ -125,6 +128,7 @@
   },
   {
     "id": "id-4",
+    "producer": "Lenovo",
     "name": "Ноутбук Lenovo V145-15 (81MT002CRA) Black",
     "display": [
       {
@@ -167,6 +171,7 @@
   },
   {
     "id": "id-5",
+    "producer": "Asus",
     "name": "Ноутбук Asus Laptop E410MA-EB268 (90NB0Q11-M17970) Peacock Blue",
     "display": [
       {
@@ -206,6 +211,7 @@
   },
   {
     "id": "id-6",
+    "producer": "HP",
     "name": "Ноутбук HP Pavilion Gaming Laptop 15-ec1003ua (1U6A8EA) Dark Grey",
     "display": [
       {
@@ -249,6 +255,7 @@
   },
   {
     "id": "id-7",
+    "producer": "Asus",
     "name": "Ноутбук Asus Laptop X515MA-BR150 (90NB0TH1-M04320) Slate Grey",
     "display": [
       {
@@ -287,6 +294,7 @@
   },
   {
     "id": "id-8",
+    "producer": "Lenovo",
     "name": "Ноутбук Lenovo IdeaPad S145-15API (81UT00NSRA) Granite Black",
     "display": [
       {
@@ -325,6 +333,7 @@
   },
   {
     "id": "id-9",
+    "producer": "Acer",
     "name": "Ноутбук Acer Aspire 7 A715-41G-R7MZ (NH.Q8LEU.004) Charcoal Black",
     "display": [
       {
@@ -368,6 +377,7 @@
   },
   {
     "id": "id-10",
+    "producer": "Asus",
     "name": "Ноутбук Asus ROG Strix G15 G512LI-HN094 (90NR0381-M01620) Black",
     "display": [
       {

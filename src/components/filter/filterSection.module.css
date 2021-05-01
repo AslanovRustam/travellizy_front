@@ -1,0 +1,13 @@
+.filterSection {
+  width: 280px;
+}
+.producersRow {
+  font-size: 24px;
+  font-weight: var(--medium);
+  margin-bottom: 20px;
+}
+.itemOfProducerList {
+  font-size: 18px;
+  font-weight: var(--medium);
+  line-height: 1.8;
+}
