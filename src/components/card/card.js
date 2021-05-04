@@ -19,7 +19,7 @@ export default function Card({ name, url, price, quantity }) {
           <span className={s.icon}> ₴</span>
         </div>
         <div>
-          <span>{quantity > 50 ? "В наличии" : "Заканчивается"}</span>
+          <span>{quantity > 10 ? "В наличии" : "Заканчивается"}</span>
         </div>
       </a>
     </>

@@ -1,7 +1,8 @@
 import Card from "./card";
 import s from "./card.module.css";
+import { connect } from "react-redux";
 
-export default function ListOfCard({ items }) {
+function ListOfCard({ items }) {
   return (
     <div className={s.listOfCard}>
       <ul className={s.itemsContainer}>
@@ -19,3 +20,10 @@ export default function ListOfCard({ items }) {
     </div>
   );
 }
+const mapStateToProps = (state) => {
+  return {
+    items: state.items,
+  };
+};
+
+export default connect(mapStateToProps)(ListOfCard);
