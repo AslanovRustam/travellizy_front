@@ -1,9 +1,9 @@
 import { useState } from "react";
 import s from "./filterSection.module.css";
-
+// import itemsActions from "../../redux/action";
 import { connect } from "react-redux";
 
-function FilterSrction({ items, changeFilter }) {
+function FilterSrction({ items, onChangeFilter }) {
   function uniqProducers(items) {
     const arrOfUniq = [];
     items.forEach((item) => {
@@ -21,21 +21,7 @@ function FilterSrction({ items, changeFilter }) {
   const filterInputTLC = filterInput.toLowerCase().trim();
   let filteredItems = [];
 
-  // const arrFilteredItems = [];
-  // const filteredItemsforRender = (items) => {
-  //   items.forEach((item) => {
-  //     if (item.producer.includes(filteredItems)) {
-  //       arrFilteredItems.push(item);
-  //       return;
-  //     }
-  //     return;
-  //   });
-  // };
-  // filteredItemsforRender(items);
-  // console.log(arrFilteredItems);
   const arrOfUniqItemsTLC = arrOfUniqItems.join().toLowerCase().split(",");
-  // console.log(arrOfUniqItemsTLC);
-  // let filteredItems = [];
   arrOfUniqItemsTLC.forEach((e) => {
     if (e.includes(filterInputTLC)) {
       e.split();
@@ -46,6 +32,17 @@ function FilterSrction({ items, changeFilter }) {
     return;
   });
   console.log(`newArr: ${filteredItems}`);
+
+  let uniqItems = [];
+  function newItems(items) {
+    for (let i = 0; i < items.length; i++) {
+      if (filteredItems.includes(items[i].producer)) {
+        uniqItems.push(items[i]);
+      }
+    }
+  }
+  const renderItems = newItems(items);
+  console.log(uniqItems);
 
   return (
     <>
@@ -73,7 +70,8 @@ function FilterSrction({ items, changeFilter }) {
                   name={item}
                   value={item}
                   defaultChecked
-                  onChange={changeFilter}
+                  onChange={onChangeFilter}
+                  // onChange={(e) => onChangeFilter(e.currentTarget.value)}
                 />
                 {item}
               </label>
@@ -90,5 +88,9 @@ const mapStateToProps = (state) => {
     items: state.items,
   };
 };
+
+// const mapDispatchToProps = (dispatch) => ({
+//   onChangeFilter: (e) => dispatch(itemsActions.changeFilter(e.target.value)),
+// });
 
 export default connect(mapStateToProps)(FilterSrction);

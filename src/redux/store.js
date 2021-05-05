@@ -6,7 +6,19 @@ const itemsReducer = (state = db, action) => {
   return state;
 };
 
-const rootReducer = combineReducers({ items: itemsReducer });
+const filterReducer = (state = "", { type, payload }) => {
+  switch (type) {
+    case "filter":
+      return payload;
+    default:
+      return 1;
+  }
+};
+
+const rootReducer = combineReducers({
+  items: itemsReducer,
+  filter: filterReducer,
+});
 const store = createStore(rootReducer, composeWithDevTools());
 
 export default store;
