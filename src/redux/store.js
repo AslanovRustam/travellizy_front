@@ -5,24 +5,28 @@ import actions from "./action";
 import { createReducer } from "@reduxjs/toolkit";
 
 const itemsReducer = (state = db, action) => {
-  console.log("лог экшена в редюсер", action);
+  // console.log("лог экшена в редюсер", action);
   return state;
 };
 const filterReducer = createReducer("", {
-  [actions.changeFilter]: (_state, action) => action.payload,
+  [actions.filterItem]: (_state, action) => {
+    return action.payload;
+  },
 });
-// const filterReducer = (state = "", action) => {
-//   switch (action.type) {
-//     case actions.changeFilter.type:
-//       return console.log("лог экшена filterReducer в редюсер", action);
-//     default:
-//       return state;
-//   }
-// };
+
+const checkedItemsForFilterReducer = createReducer([], {
+  [actions.checkedItemsForFilter]: (state, { payload }) => {
+    return [...state, payload];
+  },
+  [actions.unCheckedItemsForFilter]: (state, { payload }) => {
+    return state.filter((item) => item !== payload);
+  },
+});
 
 const rootReducer = combineReducers({
   items: itemsReducer,
-  filter: filterReducer,
+  filteredItems: filterReducer,
+  checkedItemsForFilter: checkedItemsForFilterReducer,
 });
 
 const store = configureStore({
@@ -41,3 +45,12 @@ export default store;
 // };
 
 // const store = createStore(rootReducer, composeWithDevTools());
+
+// const filterReducer = (state = "", action) => {
+//   switch (action.type) {
+//     case actions.changeFilter.type:
+//       return console.log("лог экшена filterReducer в редюсер", action);
+//     default:
+//       return state;
+//   }
+// };
