@@ -15,11 +15,3 @@ export const getFilteredItems = (state) => {
     return allItems;
   }
 };
-// let uniqItems = [];
-// function newItems(items) {
-//   for (let i = 0; i < items.length; i++) {
-//     if (filteredItems.includes(items[i].producer)) {
-//       uniqItems.push(items[i]);
-//     }
-//   }
-// }

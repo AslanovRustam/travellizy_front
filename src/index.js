@@ -1,26 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import store from "./redux/store";
 import { Provider } from "react-redux";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import actions from "./redux/action";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
+
   document.getElementById("root")
 );
 
 reportWebVitals();
-
-// store.dispatch(actions.changeFilter(25));
-// store.dispatch(actions.myAction(5));
-// store.dispatch(actions.myAction2);
-// console.log(actions.myAction);
-// console.log(actions.myAction2);
-// console.log(store.getState());

@@ -20,11 +20,12 @@ export default function CardDetail({
 }) {
   return (
     <a target="_blank" href="{}">
-      <img src="{}" alt="{}" width="244px" height="280px" />
+      {/* <img src="{}" alt="{}" width="244px" height="280px" />
       <div>
         <span>{}</span>
         <span>{} </span>
-      </div>
+      </div> */}
+      HELLO
     </a>
   );
 }

@@ -5,20 +5,20 @@ export default function Card({ name, url, price, quantity }) {
     <>
       <a target="_blank" href="{}">
         <img
-          src={defaultImg}
+          src={url ? url : defaultImg}
           className={s.itemImg}
           alt={name}
           width="380"
           height="214"
         />
-        <div>
+        <div className={s.itemNameCantainer}>
           <p className={s.itemName}>{name}</p>
         </div>
-        <div>
+        <div className={s.priceContainer}>
           <span>{price}</span>
           <span className={s.icon}> ₴</span>
         </div>
-        <div>
+        <div className={s.quantityContainer}>
           <span>{quantity > 10 ? "В наличии" : "Заканчивается"}</span>
         </div>
       </a>

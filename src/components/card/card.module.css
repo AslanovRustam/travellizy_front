@@ -1,10 +1,10 @@
 .icon {
-  font-size: 18px;
+  font-size: 24px;
 }
 .itemsContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 .cardContainer {
   width: calc((100% - 6 * 10px) / 3);
@@ -23,15 +23,24 @@
     0px 0px 2px 2px rgba(0, 0, 0, 0.14),
     0px 0px 2px 2px rgba(219, 14, 116, 0.12);
 }
+.itemNameCantainer {
+  margin: 10px;
+}
 .itemName {
-  color: var(--primary-color);
+  color: black;
   display: block;
-  /* width: 100%; */
 }
 .itemImg {
   width: 100%;
-  height: auto;
 }
 .listOfCard {
   width: 1000px;
+}
+.priceContainer {
+  color: black;
+  font-size: 24px;
+}
+.quantityContainer {
+  color: #00a046;
+  font-size: 24px;
 }

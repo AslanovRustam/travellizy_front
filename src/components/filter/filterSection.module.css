@@ -2,11 +2,13 @@
   width: 280px;
 }
 .producersRow {
+  color: var(--primary-color);
   font-size: 24px;
   font-weight: var(--medium);
   margin-bottom: 20px;
 }
 .itemOfProducerList {
+  color: var(--primary-color);
   font-size: 18px;
   font-weight: var(--medium);
   line-height: 1.8;
