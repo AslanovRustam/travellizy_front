@@ -1,3 +1,5 @@
+import { createAction } from "@reduxjs/toolkit";
+
 const myAction = (value) => {
   return {
     type: "MY_ACTION",
@@ -5,6 +7,7 @@ const myAction = (value) => {
   };
 };
 
+// const  = createAction("filter");
 const changeFilter = (value) => ({
   type: "filter",
   payload: value,

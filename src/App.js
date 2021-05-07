@@ -6,10 +6,7 @@ import Container from "./components/container/container";
 function App() {
   return (
     <Container>
-      {/* <Filter items={db} /> */}
       <Filter />
-
-      {/* <ListOfCard items={db} /> */}
       <ListOfCard />
     </Container>
   );

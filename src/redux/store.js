@@ -1,24 +1,43 @@
-import { createStore, combineReducers } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
+import { combineReducers } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
 import db from "../db.json";
+import actions from "./action";
+import { createReducer } from "@reduxjs/toolkit";
 
 const itemsReducer = (state = db, action) => {
+  console.log("лог экшена в редюсер", action);
   return state;
 };
-
-const filterReducer = (state = "", { type, payload }) => {
-  switch (type) {
-    case "filter":
-      return payload;
-    default:
-      return 1;
-  }
-};
+const filterReducer = createReducer("", {
+  [actions.changeFilter]: (_state, action) => action.payload,
+});
+// const filterReducer = (state = "", action) => {
+//   switch (action.type) {
+//     case actions.changeFilter.type:
+//       return console.log("лог экшена filterReducer в редюсер", action);
+//     default:
+//       return state;
+//   }
+// };
 
 const rootReducer = combineReducers({
   items: itemsReducer,
   filter: filterReducer,
 });
-const store = createStore(rootReducer, composeWithDevTools());
+
+const store = configureStore({
+  reducer: rootReducer,
+});
 
 export default store;
+
+// const filterReducer = (state = "", { type, payload }) => {
+//   switch (type) {
+//     case "filter":
+//       return payload;
+//     default:
+//       return state;
+//   }
+// };
+
+// const store = createStore(rootReducer, composeWithDevTools());

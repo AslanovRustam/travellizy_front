@@ -1,9 +1,9 @@
 import { useState } from "react";
 import s from "./filterSection.module.css";
-// import itemsActions from "../../redux/action";
+import itemsActions from "../../redux/action";
 import { connect } from "react-redux";
 
-function FilterSrction({ items, onChangeFilter }) {
+function FilterSrction({ items, onChangeFilter, filter }) {
   function uniqProducers(items) {
     const arrOfUniq = [];
     items.forEach((item) => {
@@ -55,7 +55,7 @@ function FilterSrction({ items, onChangeFilter }) {
             <input
               type="text"
               placeholder="enter your search input"
-              // value={filterInput}
+              value={filterInput}
               onChange={(e) => setFilterInput(e.currentTarget.value)}
             />
           </label>
@@ -86,11 +86,12 @@ function FilterSrction({ items, onChangeFilter }) {
 const mapStateToProps = (state) => {
   return {
     items: state.items,
+    filter: state.filter,
   };
 };
 
-// const mapDispatchToProps = (dispatch) => ({
-//   onChangeFilter: (e) => dispatch(itemsActions.changeFilter(e.target.value)),
-// });
+const mapDispatchToProps = (dispatch) => ({
+  onChangeFilter: (e) => dispatch(itemsActions.changeFilter(e.target.value)),
+});
 
-export default connect(mapStateToProps)(FilterSrction);
+export default connect(mapStateToProps, mapDispatchToProps)(FilterSrction);
