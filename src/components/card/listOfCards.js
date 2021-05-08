@@ -12,7 +12,7 @@ export default function ListOfCard() {
       <ul className={s.itemsContainer}>
         {filteredItems.map((item) => (
           <li key={item.id} className={s.cardContainer}>
-            <Link to={`/${item.name}`}>
+            <Link to={`/laptop/${item.name}`}>
               <Card
                 name={item.name}
                 url={item.url}

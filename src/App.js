@@ -7,10 +7,13 @@ import CardDetail from "./components/card/cardDetail";
 function App() {
   return (
     <Container>
-      <Filter />
-      <ListOfCard />
       <Switch>
-        <Route path="/item/:itemName" exact>
+        <Route path="/" exact>
+          <Filter />
+          <ListOfCard />
+        </Route>
+
+        <Route path="/laptop/:itemName">
           <CardDetail />
         </Route>
       </Switch>

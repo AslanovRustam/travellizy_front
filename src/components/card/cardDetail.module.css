@@ -1,0 +1,13 @@
+.priceContainer {
+  color: black;
+  font-weight: 700;
+  font-size: 48px;
+}
+.quantityContainer {
+  color: #00a046;
+  font-weight: 700;
+  font-size: 48px;
+}
+.cardDetailsMainInfo {
+  display: flex;
+}
