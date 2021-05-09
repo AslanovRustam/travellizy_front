@@ -1,6 +1,14 @@
 import defaultImg from "../../images/default.png";
 import s from "./card.module.css";
-export default function Card({ name, url, price, quantity }) {
+
+interface Props {
+  name: string;
+  url: string;
+  price: string;
+  quantity: number;
+}
+
+export default function Card({ name, url, price, quantity }: Props) {
   return (
     <>
       {/* <a target="_blank" href="{}"> */}

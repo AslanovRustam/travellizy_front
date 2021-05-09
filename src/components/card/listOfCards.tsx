@@ -3,6 +3,15 @@ import s from "./card.module.css";
 import { getFilteredItems } from "../../redux/selectors";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { PropertySignature } from "typescript";
+
+interface Props {
+  id: string;
+  name: string;
+  url: string;
+  price: string;
+  quantity: number;
+}
 
 export default function ListOfCard() {
   const filteredItems = useSelector(getFilteredItems);
@@ -10,7 +19,7 @@ export default function ListOfCard() {
   return (
     <div className={s.listOfCard}>
       <ul className={s.itemsContainer}>
-        {filteredItems.map((item) => (
+        {filteredItems.map((item: Props) => (
           <li key={item.id} className={s.cardContainer}>
             <Link to={`/laptop/${item.name}`}>
               <Card

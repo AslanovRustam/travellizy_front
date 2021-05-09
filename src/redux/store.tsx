@@ -4,7 +4,7 @@ import db from "../db.json";
 import actions from "./action";
 import { createReducer } from "@reduxjs/toolkit";
 
-const itemsReducer = (state = db, action) => {
+const itemsReducer = (state = db, _action: any) => {
   return state;
 };
 const filterReducer = createReducer("", {

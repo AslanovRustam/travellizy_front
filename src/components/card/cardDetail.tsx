@@ -4,11 +4,20 @@ import { getAllItems } from "../../redux/selectors";
 import s from "./cardDetail.module.css";
 import defaultImg from "../../images/default.png";
 
+interface Item {
+  name: string;
+}
+interface Element {
+  element: string | number;
+}
+
 export default function CardDetail() {
   // const params = useParams();
-  const { itemName } = useParams();
+  // const { itemName } = useParams<Params>();
+  const { itemName } = useParams<{ itemName: string }>();
+
   const items = useSelector(getAllItems);
-  const currentItem = items.find((item) => item.name === itemName);
+  const currentItem = items.find((item: Item) => item.name === itemName);
   return (
     <div>
       <h1>{currentItem.name}</h1>
@@ -67,8 +76,9 @@ export default function CardDetail() {
         <h3>Сетевые адаптеры:</h3>
         <p>
           {" "}
-          {currentItem.connection[0].networkAdapters.map((item) => (
-            <li key={item}>{item}</li>
+          {currentItem.connection[0].networkAdapters.map((element: Element) => (
+            // <li key={element}>{element}</li>
+            <li>{element}</li>
           ))}
         </p>
         <h3>Разъемы и порты ввода-вывода</h3>
@@ -77,10 +87,10 @@ export default function CardDetail() {
       <div>
         <h2>Дополнительная информация</h2>
         <p>Страна-производитель .... {currentItem.producingCountry}</p>
-        <h3>Дополнительные возможности:</h3>
         <p>
-          {currentItem.additionalFeatures.map((item) => (
-            <li key={item}>{item}</li>
+          {currentItem.additionalFeatures.map((element: Element) => (
+            // <li key={item}>{item}</li>
+            <li>{element}</li>
           ))}
         </p>
         <p>Страна регистрации бренда .... {currentItem.countryRegistration}</p>

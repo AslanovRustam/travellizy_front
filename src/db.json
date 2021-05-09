@@ -253,7 +253,9 @@
           "Wi-Fi 802.11ac",
           "Bluetooth 5.0",
           "Gigabit Ethernet"
-        ],
+        ]
+      },
+      {
         "connectors": "1 x USB Type-C (5 Гбіт/сек)/1 x USB (5 Гбіт/сек)/1 x USB 2.0/HDMI/LAN (RJ-45)/комбінований аудіороз'єм для навушників/мікрофона/кардридер"
       }
     ],
