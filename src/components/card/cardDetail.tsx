@@ -7,9 +7,8 @@ import defaultImg from "../../images/default.png";
 interface Item {
   name: string;
 }
-interface Element {
-  element: string | number;
-}
+
+type Element = string;
 
 export default function CardDetail() {
   // const params = useParams();
@@ -77,8 +76,8 @@ export default function CardDetail() {
         <p>
           {" "}
           {currentItem.connection[0].networkAdapters.map((element: Element) => (
-            // <li key={element}>{element}</li>
-            <li>{element}</li>
+            <li key={element.toString()}>{element}</li>
+            // <li>{element}</li>
           ))}
         </p>
         <h3>Разъемы и порты ввода-вывода</h3>
@@ -89,8 +88,8 @@ export default function CardDetail() {
         <p>Страна-производитель .... {currentItem.producingCountry}</p>
         <p>
           {currentItem.additionalFeatures.map((element: Element) => (
-            // <li key={item}>{item}</li>
-            <li>{element}</li>
+            <li key={element.toString()}>{element}</li>
+            // <li>{element}</li>
           ))}
         </p>
         <p>Страна регистрации бренда .... {currentItem.countryRegistration}</p>

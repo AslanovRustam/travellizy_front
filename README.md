@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# `Travellizy_Front-end_test`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## `Задача:`
 
-## Available Scripts
+Необходимо реализовать фильтр поиска карточек товаров.
 
-In the project directory, you can run:
+- Данные товаров и фильтра - произвольные (json файл или sandbox api);
+- Реализация в рамках указанных технологий.
 
-### `npm start`
+## `Используемые технологии:`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- в качестве базы данных использован json файл(картинка default - на случай если картинка из стороннего ресурса не отрендерится);
+- проект написан на React-TypeScript;
+- использованы хуки, раутер, \*tsx, CSS модули, Redux, стили кастомные, деплой приложения на gh-pages.
+- ссылка на страницу приложения https://aslanovrustam.github.io/travellizy_front/
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `Реализация`
 
-### `npm test`
+- приложение поделено на компоненты(секция с фильтрами, секция рендера коллекции, секция отображения выделенной карточки товара);
+- к каждому компоненту подключен свой css модуль;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### `Компоненты:`
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- компонент card - компонент ребенок для прорисовки коллекции одинаковых компонентов элементов;
+- компонент listOfCards - компонент прорисовки коллекции карточек отфильтрованных(в случае использования фильтра) или полной исходной коллекции компонентов;
+- компонент cardDetail - компонент прорисовки выделенного(при клике на элемент коллекции) элемента с детальной информации на основании данных из json файла;
+- компонент container -компонет контейнер для обертки всех остальных компонентов;
+- компонент filterSection - компонент прорисовки и фильтрации списка возможных к отображению элементов(инпут и чекбоксы уникальных производителей товаров);

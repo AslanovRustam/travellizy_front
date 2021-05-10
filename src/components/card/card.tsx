@@ -11,7 +11,6 @@ interface Props {
 export default function Card({ name, url, price, quantity }: Props) {
   return (
     <>
-      {/* <a target="_blank" href="{}"> */}
       <img
         src={url ? url : defaultImg}
         className={s.itemImg}
@@ -29,7 +28,6 @@ export default function Card({ name, url, price, quantity }: Props) {
       <div className={s.quantityContainer}>
         <span>{quantity > 10 ? "В наличии" : "Заканчивается"}</span>
       </div>
-      {/* </a> */}
     </>
   );
 }

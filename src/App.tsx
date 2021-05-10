@@ -8,12 +8,12 @@ function App() {
   return (
     <Container>
       <Switch>
-        <Route path="/" exact>
+        <Route path="/travellizy_front" exact>
           <Filter />
           <ListOfCard />
         </Route>
 
-        <Route path="/laptop/:itemName">
+        <Route path="/travellizy_front/:itemName">
           <CardDetail />
         </Route>
       </Switch>
