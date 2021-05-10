@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/travellizy_front/static/css/main.c36a57bd.chunk.css",
+    "main.js": "/travellizy_front/static/js/main.e3f01445.chunk.js",
+    "main.js.map": "/travellizy_front/static/js/main.e3f01445.chunk.js.map",
+    "runtime-main.js": "/travellizy_front/static/js/runtime-main.82e82d94.js",
+    "runtime-main.js.map": "/travellizy_front/static/js/runtime-main.82e82d94.js.map",
+    "static/js/2.907e8808.chunk.js": "/travellizy_front/static/js/2.907e8808.chunk.js",
+    "static/js/2.907e8808.chunk.js.map": "/travellizy_front/static/js/2.907e8808.chunk.js.map",
+    "static/js/3.c876a12d.chunk.js": "/travellizy_front/static/js/3.c876a12d.chunk.js",
+    "static/js/3.c876a12d.chunk.js.map": "/travellizy_front/static/js/3.c876a12d.chunk.js.map",
+    "index.html": "/travellizy_front/index.html",
+    "static/css/main.c36a57bd.chunk.css.map": "/travellizy_front/static/css/main.c36a57bd.chunk.css.map",
+    "static/js/2.907e8808.chunk.js.LICENSE.txt": "/travellizy_front/static/js/2.907e8808.chunk.js.LICENSE.txt",
+    "static/media/default.42bbc4bd.png": "/travellizy_front/static/media/default.42bbc4bd.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.82e82d94.js",
+    "static/js/2.907e8808.chunk.js",
+    "static/css/main.c36a57bd.chunk.css",
+    "static/js/main.e3f01445.chunk.js"
+  ]
+}
